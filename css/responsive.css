@@ -1,0 +1,204 @@
+@media screen and (max-width: 480px) {
+  .hamburger-button {
+    margin-right: 0px;
+  }
+  .hamburger-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .slider-wrap {
+    width: 100%;
+    height: 100vh;
+  }
+  .slide-item > img {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .header-title {
+    width: 100%;
+  }
+  header .header-title .header-logo {
+    margin-left: 20px;
+  }
+  header .bxslider {
+    position: relative;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header .bxslider img {
+    width: 100vw;
+    height: 100%;
+  }
+  header .news {
+    width: 100%;
+    height: 100px;
+    bottom: 0%;
+    right: 0%;
+    padding: 20px;
+    top: 80%;
+  }
+  header .news p {
+    letter-spacing: 0px;
+  }
+  main .small-flex {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  main .small-flex .small {
+    padding-left: 0px;
+  }
+  main .small-flex .small img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: -30px;
+  }
+  main .small-flex .small .tomi-text {
+    width: 200px;
+    margin-left: -70px;
+    letter-spacing: 0px;
+  }
+  main .small-flex .small .chura-text {
+    margin-left: -50px;
+  }
+  main .concept {
+    width: 100%;
+    height: 800px;
+    padding-bottom: 50px;
+  }
+  main .concept img {
+    margin-bottom: 30px;
+  }
+  main .concept h2 {
+    font-size: 27px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  main .concept p {
+    width: 100%;
+    line-height: 2.2;
+    text-align: center;
+    padding: 0 10px;
+  }
+  main .story {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+  }
+  main .story .story-text {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-left: 0;
+  }
+  main .story .story-text img {
+    padding-left: 0px;
+    margin: 0 auto 30px auto;
+  }
+  main .story .story-text p {
+    text-align: justify;
+    line-height: 2.4;
+  }
+  main .feature {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 10px 0 10px;
+  }
+  main .feature .feature-flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  main .feature .feature-flex .feature-img {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  main .feature .feature-flex .feature-text {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 50px 10px;
+  }
+  main .feature .feature-flex .feature-text h3 {
+    margin-bottom: 20px;
+  }
+  main .feature .feature-flex .feature-text h4 {
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  main .feature .feature-flex .feature-text p {
+    line-height: 2;
+  }
+  main .feature .row-reverse .feature-img {
+    margin-left: 0px;
+  }
+  main .feature .row-reverse .feature-text {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 50px 10px;
+  }
+  main .hearts {
+    margin-bottom: 50px;
+  }
+  main .cook {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  main .cook .cook-img ul {
+    display: flex;
+    flex-direction: column;
+  }
+  main .cook .cook-text {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .footer-top .footer-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-top .footer-flex .footer-text {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+  }
+  footer .footer-top .footer-flex .footer-icon {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+  }
+  footer .footer-top .footer-flex .footer-icon ul {
+    margin-left: 0px;
+  }
+  footer .footer-center {
+    width: 100%;
+    height: 100px;
+    background-color: #707070;
+  }
+  footer .footer-center .loopSlide img {
+    width: 100%;
+    padding-bottom: 300px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

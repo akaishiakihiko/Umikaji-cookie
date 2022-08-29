@@ -1,0 +1,524 @@
+@import '_settings';
+
+//-------------------------------
+// 全体構造
+// ------------------------------
+body {
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+  font-size: $font-size-normal;
+  color: $color;
+  background-color: $bace-color;
+  font-weight: 500;
+}
+
+a:hover {
+  color: $accent-color;
+}
+
+
+//オープニングの設定// 
+/* Loading背景画面設定　*/
+#splash {
+
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  text-align: center;
+  background: #707070;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width: 260px;
+  color: #fff;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//ハンバーガーメニュー//
+.hamburger-button {
+  margin-right: 150px;
+
+  path {
+    fill: #707070;
+  }
+}
+
+.hamburger-nav {
+  width: 100%;
+  height: 100vh;
+  background-color: $accent-color;
+  @include center ();
+  padding: 120px 0 0 0;
+  letter-spacing: 3px;
+
+  ul {
+    margin-bottom: 20px;
+  }
+
+  li {
+    color: #fff;
+    font-size: 19px;
+    line-height: 2.4;
+  }
+
+  a:hover {
+    color: gray;
+  }
+
+  .icon {
+    ul {
+      @include row ();
+      width: 300px;
+      margin: 0 auto;
+
+    }
+
+    li {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+
+//ズームフェードスライド//
+.slider-wrap {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+// 画像の表示(オブジェクトフィットなど)
+.slide-item>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//ズームする アニメーション
+@keyframes fadezoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+//このクラス名で、ズームするアニメーションを呼び出せる
+.slick-animation {
+  animation: fadezoom 5s 0s forwards;
+}
+
+
+
+//スライドインnews//
+//右から左へ//
+.slidein-right {
+  opacity: 0;
+  animation: 3s slideIn forwards;
+  animation-iteration-count: 1;
+  /* 実行回数 */
+
+  .slidein.is-animated {
+    animation: slideIn 7s cubic-bezier(0.3, 1, 0.5, 1) 1 forwards;
+    /* なめらかに */
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+/*==================================================
+フッタースライダー
+===================================*/
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+  margin: 0 10px;
+  /*スライド左右の余白調整*/
+}
+
+
+.back-top {
+  font-size: $font-size-middle;
+  color: $accent-color;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 8%;
+  right: 12%;
+  display: none;
+}
+
+
+//-------------------------------
+// ヘッダー
+// ------------------------------
+header {
+  width: 1200px;
+  margin: 0 auto;
+
+  .header-title {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    @include row ();
+    padding-top: 5px;
+  }
+
+  .logo-center {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .news {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 80px;
+    padding: 20px 10px 10px 30px;
+    background-color: rgba(0, 0, 0, .6);
+    letter-spacing: 3px;
+
+    span {
+      color: $accent-color;
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
+
+    p {
+      color: #fff;
+      padding-top: 8px;
+      line-height: 1.5;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+//-------------------------------
+// メイン
+// ------------------------------
+main {
+  .small-flex {
+    width: 1200px;
+    margin: 0 auto;
+    @include row ();
+
+    .small {
+      @include row ();
+      justify-content: flex-start;
+      width: 1200px;
+      height: 200px;
+      margin: 0 auto 100px auto;
+
+      .tomi-text {
+        width: 260px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+        margin-top: 80px;
+
+        h4 {
+          font-size: 19px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .concept {
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    background-image: url(../images/concept-img.jpg);
+    @include center ();
+
+    img {
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: $font-size-large;
+      color: #fff;
+      font-weight: bold;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      width: 640px;
+      margin: 0 auto;
+      color: #fff;
+      line-height: 2.6;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+  }
+
+  .story {
+    width: 1200px;
+    margin: 0 auto;
+    height: 1000px;
+    background-image: url(../images/main-story-image.jpg);
+
+    .story-text {
+      width: 500px;
+      height: 1000px;
+      margin-left: 700px;
+      background-color: rgba(0, 0, 0, .5);
+      color: #fff;
+      padding: 50px;
+
+      img {
+        margin: 50px auto 50px auto;
+        padding-left: 150px;
+      }
+
+      h3 {
+        font-size: $font-size-middle;
+        color: #fff;
+        font-weight: bold;
+        line-height: 2.0;
+        margin-bottom: 30px;
+      }
+
+      p {
+        line-height: 2.8;
+      }
+    }
+  }
+
+  .feature {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 280px 0;
+    background-image: url(../images/feature-img6.jpg);
+
+
+    .feature-flex {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 160px;
+
+      .feature-img {
+        width: 600px;
+        height: 600px;
+        margin-right: 50px;
+      }
+
+      .feature-text {
+        background-color: rgba(100, 100, 100, .8);
+        width: 600px;
+        height: 400px;
+        margin: 300px -100px 0 50px;
+        padding: 70px 50px 50px 50px;
+
+
+
+        h3 {
+          font-size: $font-size-middle;
+          color: #fff;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+
+        h4 {
+          color: #fff;
+          font-size: 19px;
+          font-weight: bold;
+          line-height: 1.8;
+          margin-bottom: 30px;
+        }
+
+        p {
+          line-height: 2.0;
+          color: #fff;
+        }
+      }
+    }
+
+    .row-reverse {
+      flex-direction: row;
+
+      .feature-img {
+        margin-left: 50px;
+      }
+
+      .feature-text {
+        margin: 300px 50px 0 -100px;
+        opacity: 1.0;
+      }
+    }
+  }
+
+  .hearts {
+    background-image: url(../images/main-hearts.jpg);
+    margin-bottom: 100px;
+
+    .hearts-text {
+      margin: 0px;
+    }
+  }
+
+  .cook {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    .cook-img {
+      ul {
+        @include row ();
+      }
+    }
+
+    .cook-text {
+      width: 800px;
+      margin: 0 auto;
+      height: 200px;
+      @include center ();
+      text-align: left;
+      color: $color;
+      padding: 30px;
+
+      h3 {
+        font-size: $font-size-middle;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      p {
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+//-------------------------------
+// フッター
+// ------------------------------
+footer {
+  width: 1200px;
+  margin: 0 auto;
+
+  .footer-top {
+    background-color: $accent-color;
+
+    .footer-flex {
+      @include row ();
+
+      .footer-text {
+        @include center ();
+        width: 600px;
+        height: 300px;
+        background-color: $accent-color;
+        color: #fff;
+        padding-top: 50px;
+        letter-spacing: 2px;
+
+        h2 {
+          font-size: $font-size-middle;
+          margin-bottom: 20px;
+        }
+
+        address {
+          line-height: 2.0;
+        }
+      }
+
+      .footer-icon {
+        @include center ();
+        width: 600px;
+        height: 200px;
+        background-color: $accent-color;
+        padding-top: 100px;
+
+        ul {
+          @include row ();
+          width: 400px;
+          margin-left: 50px;
+        }
+
+        li {
+          font-size: 50px;
+          color: #fff;
+        }
+
+        a:hover {
+          color: gray;
+        }
+      }
+    }
+  }
+
+  .footer-center {
+    width: 1200px;
+    height: 200px;
+    background-color: $accent-color;
+  }
+
+  .footer-bottom {
+    height: 50px;
+    color: $color;
+    @include center ();
+    font-size: 12px;
+  }
+}

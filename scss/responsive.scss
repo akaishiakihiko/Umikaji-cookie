@@ -1,0 +1,270 @@
+@media screen and (max-width:480px) {
+
+  @import '_settings';
+
+  //-------------------------------
+  // 全体構造
+  // ------------------------------
+
+  //ハンバーガーメニュー//
+  .hamburger-button {
+    margin-right: 0px;
+  }
+
+  .hamburger-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  //ズームフェードスライド//
+  .slider-wrap {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .slide-item>img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+
+
+  //-------------------------------
+  // ヘッダー
+  // ------------------------------
+
+  header {
+    width: 100%;
+    margin: 0 auto;
+
+    .header-title {
+      width: 100%;
+
+      .header-logo {
+        margin-left: 20px;
+      }
+    }
+
+    .bxslider {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100vw;
+        height: 100%;
+      }
+    }
+
+    .news {
+      width: 100%;
+      height: 100px;
+      bottom: 0%;
+      right: 0%;
+      padding: 20px;
+      top: 80%;
+
+      p {
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+
+  //-------------------------------
+  // メイン
+  // ------------------------------
+  main {
+    .small-flex {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .small {
+        padding-left: 0px;
+
+        img {
+          @include center ();
+          margin-left: -30px;
+        }
+
+        .tomi-text {
+          width: 200px;
+          margin-left: -70px;
+          letter-spacing: 0px;
+        }
+
+        .chura-text {
+          margin-left: -50px;
+        }
+      }
+    }
+
+    .concept {
+      width: 100%;
+      height: 800px;
+      padding-bottom: 50px;
+
+      img {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: $font-size-middle;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 100%;
+        line-height: 2.2;
+        text-align: center;
+        padding: 0 10px;
+      }
+    }
+
+    .story {
+      width: 100%;
+      height: 800px;
+      margin: 0 auto;
+
+      .story-text {
+        width: 100%;
+        height: 800px;
+        @include center ();
+        padding: 10px;
+        margin-left: 0;
+
+        img {
+          padding-left: 0px;
+          margin: 0 auto 30px auto;
+        }
+
+        p {
+          text-align: justify;
+          line-height: 2.4;
+        }
+      }
+    }
+
+    .feature {
+      width: 100%;
+      margin: 0 auto;
+      padding: 50px 10px 0 10px;
+
+      .feature-flex {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        .feature-img {
+          width: 100%;
+          height: 100%;
+          margin-right: 0;
+        }
+
+        .feature-text {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 50px 10px;
+
+          h3 {
+            margin-bottom: 20px;
+          }
+
+          h4 {
+            margin-bottom: 20px;
+            font-size: 19px;
+            line-height: 1.4;
+          }
+
+          p {
+            line-height: 2.0;
+          }
+        }
+      }
+
+      .row-reverse {
+        .feature-img {
+          margin-left: 0px;
+        }
+
+        .feature-text {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 50px 10px;
+        }
+      }
+    }
+
+    .hearts {
+      margin-bottom: 50px;
+    }
+
+    .cook {
+      width: 100%;
+      margin-bottom: 50px;
+
+      .cook-img {
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .cook-text {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+
+  //-------------------------------
+  // フッター
+  // ------------------------------
+  footer {
+    width: 100%;
+
+    .footer-top {
+      .footer-flex {
+        display: flex;
+        flex-direction: column;
+
+        .footer-text {
+          width: 100%;
+          height: 100%;
+          padding-top: 50px;
+        }
+
+        .footer-icon {
+          width: 100%;
+          height: 100%;
+          padding-top: 50px;
+
+          ul {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+    .footer-center {
+      width: 100%;
+      height: 100px;
+      background-color: $accent-color;
+
+      .loopSlide img {
+        width: 100%;
+        padding-bottom: 300px;
+      }
+    }
+  }
+}

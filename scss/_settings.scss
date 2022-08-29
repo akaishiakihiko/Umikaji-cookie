@@ -1,0 +1,31 @@
+$main-color: #DDD9D8;
+$accent-color: #707070;
+$bace-color: #ffffff;
+
+$color: #373737;
+
+$font-size-normal: 16px;
+$font-size-middle: 27px;
+$font-size-large: 35px;
+
+//真ん中に配置する
+@mixin center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+//横に並べる
+@mixin row() {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+//1400px幅に制限
+@mixin wrapper1400 () {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
