@@ -1,6 +1,6 @@
 // JavaScript Document
 
-$(function(){
+$(function () {
 
   /* オプション設定 */
   const options = {
@@ -25,31 +25,36 @@ $(function(){
   const weight = options.weight[0].toUpperCase() + options.weight.substring(1);
   const barsIcon = icons['bars' + weight];
   const timesIcon = icons['times' + options.weight[0].toUpperCase() + options.weight.substring(1)];
-  
+
   /* overlay（z-index対策） */
   $nav.parent().append('<div id="hamburger-overlay"></div>');
   const $overlay = $('#hamburger-overlay');
   $overlay.css('transition-duration', (options.duration / 1000) + 's');
-  if (! options.dark) {
+  if (!options.dark) {
     $overlay.css('background-color', 'transparent');
   }
-  
+
   /* メニュー収納 */
   prepare();
   setTimeout(() => {
     prepare();
   }, 0)
-  $(window).on('resize', function() {
+  $(window).on('resize', function () {
     prepare();
   });
-  
+
   /* クリック処理 */
   let isOpen = false;
-  $button.on('click', function() {
+  $button.on('click', function () {
     isOpen ? close() : open();
-    isOpen = ! isOpen;
+    isOpen = !isOpen;
   });
-  
+
+  $('.hamburger-nav a').click(() => {
+    close()
+    isOpen = false
+  })
+
   /* Prepare */
   function prepare() {
     navHeight = $nav.outerHeight(); /* responsive対応 */

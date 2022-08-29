@@ -9,6 +9,7 @@ body {
   color: $color;
   background-color: $bace-color;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 a:hover {
