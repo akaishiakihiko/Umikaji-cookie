@@ -47,6 +47,10 @@
   header .news p {
     letter-spacing: 0px;
   }
+  main {
+    width: 100%;
+    margin: auto;
+  }
   main .small-flex {
     width: 100%;
     margin: 0 auto;
@@ -159,6 +163,8 @@
     padding: 50px 10px;
   }
   main .hearts {
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 50px;
   }
   main .hearts img {
@@ -166,6 +172,7 @@
   }
   main .cook {
     width: 100%;
+    margin: 0 auto;
     margin-bottom: 50px;
   }
   main .cook .cook-img ul {

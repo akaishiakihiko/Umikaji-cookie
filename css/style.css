@@ -20,7 +20,7 @@ a:hover {
   height: 100%;
   z-index: 999;
   text-align: center;
-  background: #707070;
+  background: #DDD9D8;
 }
 
 /* Loading画像中央配置　*/
@@ -79,7 +79,7 @@ a:hover {
 .hamburger-nav {
   width: 100%;
   height: 100vh;
-  background-color: #707070;
+  background-color: #DDD9D8;
   display: flex;
   flex-direction: column;
   justify-content: center;

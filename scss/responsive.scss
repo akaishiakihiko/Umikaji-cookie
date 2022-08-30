@@ -76,6 +76,9 @@
   // メイン
   // ------------------------------
   main {
+    width: 100%;
+    margin: auto;
+
     .small-flex {
       width: 100%;
       margin: 0 auto;
@@ -207,6 +210,8 @@
     }
 
     .hearts {
+      width: 100%;
+      margin: 0 auto;
       margin-bottom: 50px;
 
       img {
@@ -216,6 +221,7 @@
 
     .cook {
       width: 100%;
+      margin: 0 auto;
       margin-bottom: 50px;
 
       .cook-img {
