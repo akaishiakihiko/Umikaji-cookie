@@ -76,10 +76,10 @@
     width: 100%;
     height: 800px;
     padding-bottom: 50px;
+    background-position: left left;
   }
   main .concept img {
     margin-bottom: 30px;
-    background-position: center center;
   }
   main .concept h2 {
     font-size: 27px;
@@ -194,16 +194,15 @@
     width: 100%;
     height: 100%;
     padding-top: 50px;
+    margin-bottom: 50px;
   }
   footer .footer-top .footer-flex .footer-icon ul {
     margin-left: 0px;
   }
-  footer .footer-center {
-    width: 100%;
-    height: 100px;
-    background-color: #707070;
+  footer .footer-top .footer-flex .footer-icon li {
+    padding-left: 20px;
   }
-  footer .footer-center .loopSlide img {
+  footer .loopSlide img {
     width: 100%;
     padding-bottom: 300px;
   }
